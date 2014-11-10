@@ -1,55 +1,53 @@
 {
 "accountUrl" : "el-local",
-"adminApiKey" : "local_admin_normal",
+"adminApiKey" : "apikey",
 
 // use with permissions to create databases, users and assign privs
 "dbaDatabaseUrl" : "jdbc:mysql://localhost:3306",
-"dbaDatabaseUser" : "abl",
-"dbaDatabasePassword" : "kahuna_local!",
+"dbaDatabaseUser" : "sa",
+"dbaDatabasePassword" : "password!",
 
 // for the logic admin database
 "adminDatabaseUrl" : "jdbc:mysql://localhost:3306/dblocal_admin",
 "adminDatabaseSchema" : "dblocal_admin",
-"adminDatabaseUser" : "dblocal_admin",
-"adminDatabasePassword" : "kahuna_local!",
-"adminDatabaseEncryptedPassword" : "plaintext:kahuna_local!",
+"adminDatabaseUser" : "sa",
+"adminDatabasePassword" : "password!",
+"adminDatabaseEncryptedPassword" : "plaintext:sa!",
 "adminDatabaseEncryptedSalt" : "salt:plaintext",
 
 // for the demo data schema and data (eg customers, orders, ...)
 "demoDatabaseUrl" : "jdbc:mysql://localhost:3306/dblocal_demo",
 "demoDatabaseSchema" : "dbdev_demo",
-"demoDatabaseUser" : "dbdev_demo",
-"demoDatabasePassword" : "kahuna_local!",
-"demoDatabaseEncryptedPassword" : "plaintext:kahuna_local!",
+"demoDatabaseUser" : "sa",
+"demoDatabasePassword" : "password!",
+"demoDatabaseEncryptedPassword" : "plaintext:password!",
 "demoDatabaseEncryptedSalt" : "salt:plaintext",
 
 "sampleDatabaseUrl" : "jdbc:mysql://localhost:3306/dblocal_sample",
 "sampleDatabaseSchema" : "dblocal_sample",
-"sampleDatabaseUser" : "dblocal_sample",
-"sampleDatabasePassword" : "kahuna_local!",
-"sampleDatabaseEncryptedPassword" : "plaintext:kahuna_local!",
+"sampleDatabaseUser" : "sa",
+"sampleDatabasePassword" : "password!",
+"sampleDatabaseEncryptedPassword" : "plaintext:password!",
 "sampleDatabaseEncryptedSalt" : "salt:plaintext",
 
-// sa password: Password0!
-"saPassword" : "Password0!",
-"saPasswordHash" : "2:fXEqE+9gwT1Qq3t94BM0QPDarOK3aI/CPdZJc02XibmH4HTyhiNXKw==",
-"saPasswordSalt" : "PxuQvGe2ZkTHp0beIYTYLE7ErwJYsX5dHy8zkd7U",
+// sa password: Password0!saPasswordHash" : "2:fXEqE+9gwT1Qq3t94B230QPDarOK3aI/CPdZJc02XibmH4HTyhiNXKw==",
+"saPasswordSalt" : "PxuQvG12ZkTHp0beIYTYLE7ErwJYsX5dHy8zkd7U",
 
-// admin password: Password1
-"adminPassword" : "Password1",
-"adminPasswordHash" : "E5SGhPcTVFC5py1cwxCiqsf5//MDU91sZ+6aZE/kkeRw05TgT6KY/UDiJdRuaj6Lfx54McpIx1j/562G8wfeDw==",
-"adminPasswordSalt" : "TaR6ptZREkX0Rqqr5Rdd",
 
-// alpha password: Password1
-"alphaPassword" : "Password1",
-"alphaPasswordHash" : "E5SGhPcTVFC5py1cwxCiqsf5//MDU91sZ+6aZE/kkeRw05TgT6KY/UDiJdRuaj6Lfx54McpIx1j/562G8wfeDw==",
-"alphaPasswordSalt" : "TaR6ptZREkX0Rqqr5Rdd",
+"adminPassword" : "password2",
+"adminPasswordHash" : "E5SGhPcTVFC5py121cwxCiqsf5//MDU91sZ+6aZE/kkeRw05TgT6KY/UDiJdRuaj6Lfx54McpIx1j/562G8wfeDw==",
+"adminPasswordSalt" : "TaR6ptZREkX0Rqq3r5Rdd",
+
+
+"alphaPassword" : "password2",
+"alphaPasswordHash" : "E5SGhPcTVFC5py1cwxCiqsf5//MDU91sdfsZ+6aZE/kkeRw05TgT6KY/UDiJdRuaj6Lfx54McpIx1j/562G8wfeDw==",
+"alphaPasswordSalt" : "TaR6ptZREkX0Rqqsdfr5Rdd",
 
 // Auth Provider
 "authUrl" : "jdbc:mysql://localhost:3306/dblocal_admin",
 "authSchema" : "dblocal_admin",
-"authUser" : "dblocal_admin",
-"authPassword" : "kahuna_local!",
-"authEncryptedPassword" : "plaintext:kanuna_local!",
+"authUser" : "sa",
+"authPassword" : "password!",
+"authEncryptedPassword" : "plaintext:passwrod!",
 "authEncryptedSalt" : "salt:plaintext"
 }

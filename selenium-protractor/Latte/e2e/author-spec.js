@@ -35,7 +35,7 @@ describe('Author mode changes >', function () {
 
         it('should switch to author mode with valid admin credentials', function () {
             // Login with default admin credentials
-            menuPage.authorLogin('admin', 'Password1');
+            menuPage.authorLogin('admin', 'pass');
             expect(menuPage.modalDialog.isPresent()).toBeFalsy();
         });
     });
@@ -47,7 +47,7 @@ describe('Author mode changes >', function () {
         });
 
         xit('Access to Author mode>', function () {
-            menuPage.toggleAuthor('admin', 'Password1');
+            menuPage.toggleAuthor('admin', 'pass');
         });
 
         it('Update column name in Left Table >', function () {
@@ -163,7 +163,7 @@ describe('Author mode changes >', function () {
 
         xit('should switch to author mode with valid admin credentials >', function () {
             // Login with default admin credentials
-            menuPage.toggleAuthor('admin', 'Password1');
+            menuPage.toggleAuthor('admin', 'pass');
         });
 
         it('Select Purchase Order Table >', function () {
@@ -314,7 +314,7 @@ describe('Author mode changes >', function () {
         }
 
         xit('Access to Author mode>', function () {
-            menuPage.toggleAuthor('admin', 'Password1');
+            menuPage.toggleAuthor('admin', 'pass');
         });
 
         it('Select Customer Table >', function () {
@@ -602,7 +602,7 @@ describe('Author mode changes >', function () {
 
         xit('should switch to author mode with valid admin credentials', function(){
             // Login with default admin credentials
-            menuPage.toggleAuthor('admin', 'Password1');
+            menuPage.toggleAuthor('admin', 'pass');
         });
 
         it('Select PurchaseOrder Table and Select "Line Item" Tab Child Table >', function () {
@@ -833,7 +833,7 @@ describe('Author mode changes >', function () {
         }
 
         xit('should switch to author mode with valid admin credentials >', function () {
-            menuPage.toggleAuthor('admin', 'Password1');
+            menuPage.toggleAuthor('admin', 'pass');
         });
 
         it('Select PurchaseOrder audit Table >', function () {

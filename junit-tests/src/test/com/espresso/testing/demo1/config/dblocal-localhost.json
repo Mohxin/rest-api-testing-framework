@@ -2,24 +2,24 @@
   // used to create/drop test_TestRules database
   // and test_TestRules user
   "setupDatabaseUrl" : "jdbc:mysql://localhost:3306",
-  "setupDatabaseUser" : "abl",
-  "setupDatabasePassword" : "kahuna_local!",
+  "setupDatabaseUser" : "sa",
+  "setupDatabasePassword" : "password!",
 
   // where any real work goes on
   // NOTE - maximum 16 chars for username length for MySQL
   // NOTE - some of these values are hard-coded in the sql scripts - make matching changes
   "testrulesDatabaseUrl" : "jdbc:mysql://localhost:3306/test_TestRules",
-  "testrulesDatabaseUser" : "test_TestRules",
-  "testrulesDatabasePassword" : "test_TestRules!",
+  "testrulesDatabaseUser" : "sa",
+  "testrulesDatabasePassword" : "password!",
 
   // used to create a new account (future)
   // (future,delete?) used to setup the database schema for this connection
   "espressoServerAdminUrl" : "http://localhost:8080/KahunaService/rest/abl/admin/v2",
-  "espressoServerAdminApiKey" : "local_admin_normal",
+  "espressoServerAdminApiKey" : "apikey",
   
   "espressoServerBaseUrl" : "http://localhost:8080/KahunaService",
   "espressoServerUser" : "sa",
-  "espressoServerPassword" : "Password1",
-  "espressoServerApiKey" : "demo_full"
+  "espressoServerPassword" : "password1",
+  "espressoServerApiKey" : "apikey"
   // espressoServerUrl is added in TestRulesSetup.js
 }
