@@ -1,0 +1,25 @@
+{
+  // used to create/drop test_TestRules database
+  // and test_TestRules user
+  "setupDatabaseUrl" : "jdbc:mysql://db-004.d.espressologic.com:3306",
+  "setupDatabaseUser" : "admin",
+  "setupDatabasePassword" : "24dk5S5u",
+
+  // where any real work goes on
+  // NOTE - maximum 16 chars for username length for MySQL
+  // NOTE - some of these values are hard-coded in the sql scripts - make matching changes
+  "testrulesDatabaseUrl" : "jdbc:mysql://db-004.d.espressologic.com:3306/test_TestRules",
+  "testrulesDatabaseUser" : "test_TestRules",
+  "testrulesDatabasePassword" : "test_TestRules!",
+
+  // used to create a new account (future)
+  // (future,delete?) used to setup the database schema for this connection
+  "espressoServerAdminUrl" : "http://houston.d.espressologic.com:80/rest/abl/admin/v2",
+  "espressoServerAdminApiKey" : "dev_admin_normal",
+
+  "espressoServerBaseUrl" : "http://houston.d.espressologic.com:80",
+  "espressoServerUser" : "admin",
+  "espressoServerPassword" : "Password1",
+  "espressoServerApiKey" : "demo_full"
+  // espressoServerUrl is added in TestRulesSetup.js
+}

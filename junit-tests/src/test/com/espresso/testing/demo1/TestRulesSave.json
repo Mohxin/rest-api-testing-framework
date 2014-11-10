@@ -1,0 +1,498 @@
+[
+  {
+    "exportVersion": "v2",
+    "name": "Espresso Test - demo1",
+    "url_name": "test-demo1",
+    "DbaseSchemas": [
+      {
+        "name": "Espresso Logic Demo",
+        "prefix": "main",
+        "url": "jdbc:mysql://db-004.d.espressologic.com:3306/dbdev_demo",
+        "catalog_name": "dbdev_demo",
+        "user_name": "dbdev_demo",
+        "active": true,
+        "dbasetype_ident": 1
+      }
+    ],
+    "ApiVersions": [
+      {
+        "name": "v1",
+        "comments": "",
+        "Resources": [
+          {
+            "ident": 1,
+            "resource_type_ident": 1,
+            "prefix": "main",
+            "table_name": "customer",
+            "name": "AllCustomers",
+            "description": "Query for all customers",
+            "is_collection": "Y",
+            "root_ident": 1,
+            "ResourceAttributes": [
+              {
+                "name": "name",
+                "description": "",
+                "column_name": "name"
+              },
+              {
+                "name": "balance",
+                "description": "",
+                "column_name": "balance"
+              }
+            ]
+          },
+          {
+            "ident": 2,
+            "resource_type_ident": 1,
+            "prefix": "main",
+            "table_name": "customer",
+            "name": "CustomerBusinessObject",
+            "description": "all customer attributes and related child attributes",
+            "is_collection": "Y",
+            "sorting": "name asc",
+            "root_ident": 2
+          },
+          {
+            "ident": 3,
+            "resource_type_ident": 1,
+            "prefix": "main",
+            "table_name": "customer",
+            "name": "Customers",
+            "description": "API example",
+            "is_collection": "Y",
+            "root_ident": 3,
+            "ResourceAttributes": [
+              {
+                "name": "Name",
+                "description": "",
+                "column_name": "name"
+              },
+              {
+                "name": "Balance",
+                "description": "",
+                "column_name": "balance"
+              },
+              {
+                "name": "CreditLimit",
+                "description": "",
+                "column_name": "credit_limit"
+              }
+            ]
+          },
+          {
+            "ident": 4,
+            "resource_type_ident": 1,
+            "prefix": "main",
+            "table_name": "lineitem",
+            "name": "LineItems",
+            "description": "API example",
+            "is_collection": "Y",
+            "join_condition": "order_number=[order_number]",
+            "sorting": "product_number asc",
+            "container_ident": 10,
+            "root_ident": 3,
+            "ResourceAttributes": [
+              {
+                "name": "ProductNumber",
+                "description": "",
+                "column_name": "product_number"
+              },
+              {
+                "name": "OrderNumber",
+                "description": "",
+                "column_name": "order_number"
+              },
+              {
+                "name": "Quantity",
+                "description": "",
+                "column_name": "qty_ordered"
+              },
+              {
+                "name": "Price",
+                "description": "",
+                "column_name": "product_price"
+              },
+              {
+                "name": "Amount",
+                "description": "",
+                "column_name": "amount"
+              }
+            ]
+          },
+          {
+            "ident": 5,
+            "resource_type_ident": 1,
+            "prefix": "main",
+            "table_name": "lineitem",
+            "name": "Lineitems",
+            "description": "Lineitems of Order",
+            "is_collection": "Y",
+            "join_condition": "order_number=[order_number]",
+            "sorting": "product_number asc",
+            "container_ident": 11,
+            "root_ident": 2
+          },
+          {
+            "ident": 6,
+            "resource_type_ident": 1,
+            "prefix": "main",
+            "table_name": "product",
+            "name": "Product",
+            "description": "Product for Lineitem",
+            "is_collection": "N",
+            "join_condition": "product_number=[product_number]",
+            "container_ident": 5,
+            "root_ident": 2
+          },
+          {
+            "ident": 7,
+            "resource_type_ident": 1,
+            "prefix": "main",
+            "table_name": "product",
+            "name": "Product",
+            "description": "Query for product",
+            "is_collection": "N",
+            "join_condition": "product_number=[product_number]",
+            "container_ident": 4,
+            "root_ident": 3,
+            "ResourceAttributes": [
+              {
+                "name": "Name",
+                "description": "",
+                "column_name": "name"
+              },
+              {
+                "name": "Price",
+                "description": "",
+                "column_name": "price"
+              },
+              {
+                "name": "ProductId",
+                "description": "",
+                "column_name": "product_number"
+              }
+            ]
+          },
+          {
+            "ident": 8,
+            "resource_type_ident": 1,
+            "prefix": "main",
+            "table_name": "product",
+            "name": "ProductDetailLink",
+            "description": "Product Detail",
+            "is_collection": "N",
+            "join_condition": "product_number=[product_number]",
+            "container_ident": 7,
+            "root_ident": 3,
+            "linked_ident": 1
+          },
+          {
+            "ident": 9,
+            "resource_type_ident": 1,
+            "prefix": "main",
+            "table_name": "product",
+            "name": "Products",
+            "description": "Query for all products",
+            "is_collection": "Y",
+            "root_ident": 9,
+            "ResourceAttributes": [
+              {
+                "name": "name",
+                "description": "",
+                "column_name": "name"
+              },
+              {
+                "name": "price",
+                "description": "",
+                "column_name": "price"
+              }
+            ]
+          },
+          {
+            "ident": 10,
+            "resource_type_ident": 1,
+            "prefix": "main",
+            "table_name": "purchaseorder",
+            "name": "Orders",
+            "description": "API example",
+            "is_collection": "Y",
+            "join_condition": "customer_name=[name]",
+            "sorting": "order_number desc",
+            "container_ident": 3,
+            "root_ident": 3,
+            "ResourceAttributes": [
+              {
+                "name": "OrderNumber",
+                "description": "",
+                "column_name": "order_number"
+              },
+              {
+                "name": "TotalAmount",
+                "description": "",
+                "column_name": "amount_total"
+              },
+              {
+                "name": "Paid",
+                "description": "",
+                "column_name": "paid"
+              },
+              {
+                "name": "Notes",
+                "description": "",
+                "column_name": "notes"
+              },
+              {
+                "name": "CustomerName",
+                "column_name": "customer_name"
+              }
+            ]
+          },
+          {
+            "ident": 11,
+            "resource_type_ident": 1,
+            "prefix": "main",
+            "table_name": "purchaseorder",
+            "name": "Orders",
+            "description": "Orders of Customer",
+            "is_collection": "Y",
+            "join_condition": "customer_name=[name]",
+            "sorting": "order_number desc",
+            "container_ident": 2,
+            "root_ident": 2
+          },
+          {
+            "ident": 12,
+            "resource_type_ident": 1,
+            "prefix": "main",
+            "table_name": "purchaseorder_audit",
+            "name": "OrderAudits",
+            "description": "Audits of Order",
+            "is_collection": "Y",
+            "join_condition": "order_number=[order_number]",
+            "container_ident": 11,
+            "root_ident": 2
+          }
+        ]
+      }
+    ],
+    "ProjectOptions": [
+      {
+        "option_value": "false",
+        "projectoptiontype_ident": 1
+      },
+      {
+        "option_value": "http://www.espressologic.com/model/",
+        "projectoptiontype_ident": 2
+      },
+      {
+        "option_value": "false",
+        "projectoptiontype_ident": 3
+      },
+      {
+        "option_value": "@metadata",
+        "projectoptiontype_ident": 4
+      },
+      {
+        "option_value": "2000",
+        "projectoptiontype_ident": 5
+      }
+    ],
+    "Rules": [
+      {
+        "entity_name": "main:customer",
+        "prop4": "javascript",
+        "rule_text1": "return row.balance <= row.credit_limit;",
+        "rule_text2": "Customer {name}'s balance: {balance|#,##0.00} exceeds their credit limit: {credit_limit|#,##0.00}",
+        "auto_name": "Validation return row.balance <= row.credit_limit;",
+        "comments": "balance cannot exceed credit limit, else throw exception",
+        "active": true,
+        "ruletype_ident": 5
+      },
+      {
+        "entity_name": "main:customer",
+        "prop4": "javascript",
+        "rule_text1": "var maxLimit = 999;\n if (row.credit_limit == maxLimit)\n \treturn false;\n else\n \treturn true;\n \n",
+        "auto_name": "Validation var maxLimit = 999;\n if (row.credit_limit == maxLimit)\n \treturn false;\n else\n \treturn true;\n \n",
+        "verbs": "INSERT,UPDATE",
+        "comments": "Test Javascript validation",
+        "active": true,
+        "ruletype_ident": 5
+      },
+      {
+        "entity_name": "main:customer",
+        "attribute_name": "balance",
+        "rule_text1": "purchaseorderList",
+        "rule_text2": "paid = false",
+        "rule_text3": "amount_total",
+        "auto_name": "Derive balance as sum(purchaseorderList.amount_total where paid = false)",
+        "comments": "sum of unpaid order totals; re-used over all changes to orders (pay, insert, delete etc.), optimized (not select sum..)",
+        "active": true,
+        "ruletype_ident": 1
+      },
+      {
+        "entity_name": "main:lineitem",
+        "attribute_name": "amount",
+        "prop4": "javascript",
+        "rule_text1": "return row.product_price * row.qty_ordered;",
+        "auto_name": "Derive amount as return row.product_price * row.qty_ordered;",
+        "comments": "price * quantity",
+        "active": true,
+        "ruletype_ident": 3
+      },
+      {
+        "entity_name": "main:lineitem",
+        "attribute_name": "product_price",
+        "rule_text1": "product",
+        "rule_text2": "price",
+        "auto_name": "Derive product_price as parentcopy(product.price)",
+        "comments": "Parent copy means order unaffected by product price changes",
+        "active": true,
+        "ruletype_ident": 4
+      },
+      {
+        "entity_name": "main:purchaseorder",
+        "prop4": "javascript",
+        "rule_text1": "if (row.amount_total != oldRow.amount_total) \n   SysLogic.insertChildFrom(\"purchaseorder_audit\", logicContext);",
+        "auto_name": "Event: if (row.amount_total != oldRow.amount_total) \n   SysLogic.insertChildFrom(\"purchaseorder_audit\", logicContext);.null",
+        "verbs": "UPDATE",
+        "comments": "Audit Order changes",
+        "active": true,
+        "ruletype_ident": 7
+      },
+      {
+        "entity_name": "main:purchaseorder",
+        "attribute_name": "amount_total",
+        "rule_text1": "lineitemList",
+        "rule_text3": "amount",
+        "auto_name": "Derive amount_total as sum(lineitemList.amount)",
+        "comments": "sum of line item amounts",
+        "active": true,
+        "ruletype_ident": 1
+      }
+    ],
+    "ApiKeys": [
+      {
+        "ident": 1,
+        "name": "Broad access",
+        "apikey": "demo_full",
+        "status": "A",
+        "logging": "*=FINE"
+      },
+      {
+        "ident": 2,
+        "name": "Restricted access",
+        "apikey": "demo_restricted",
+        "status": "A",
+        "data": "customerName=Bravo Hardware"
+      },
+      {
+        "ident": 3,
+        "name": "SalesRep",
+        "apikey": "SalesRepApiKey",
+        "status": "A",
+        "logging": "*=FINE",
+        "user_identifier": "sam"
+      }
+    ],
+    "Roles": [
+      {
+        "name": "App owner",
+        "description": "Full permissions on the entire project",
+        "default_permission": "A",
+        "default_apivisibility": "TVPRM",
+        "ApiKeyRoles": [
+          {
+            "apikey_ident": 1
+          }
+        ]
+      },
+      {
+        "name": "App user",
+        "description": "Limited permissions on the entire project",
+        "default_permission": "N",
+        "default_apivisibility": "TVPRM",
+        "ApiKeyRoles": [
+          {
+            "apikey_ident": 2
+          }
+        ],
+        "TablePermissions": [
+          {
+            "name": "Access customers",
+            "description": "only customers associated with current user, per apiKey (see Details tab, Globals)",
+            "entity_name": "main:customer",
+            "predicate": "name='@{customerName}'",
+            "access_type": "R"
+          },
+          {
+            "name": "Access orders",
+            "description": "only orders associated with customer(s) for current user, per apiKey (see Details tab, Globals)",
+            "entity_name": "main:purchaseorder",
+            "predicate": "customer_name='@{customerName}'",
+            "access_type": "R"
+          },
+          {
+            "name": "Access lineitems",
+            "description": "only line items associated with customer(s) for current user, per apiKey (see Details tab, Globals)",
+            "entity_name": "main:lineitem",
+            "predicate": "join purchaseorder po on po.order_number = lineitem.order_number where po.customer_name='@{customerName}'",
+            "access_type": "A"
+          },
+          {
+            "name": "Access products all restricted",
+            "description": "column security - product_number & name visible to all, but not insert",
+            "entity_name": "main:product",
+            "column_names": "product_number,name",
+            "access_type": "RU"
+          },
+          {
+            "name": "Access products 2 full",
+            "description": "column security - product_number & name visible to all with insert, product 2 only",
+            "entity_name": "main:product",
+            "predicate": "product_number = 2",
+            "access_type": "A"
+          }
+        ]
+      },
+      {
+        "name": "Sales Rep",
+        "description": "Preselects orders",
+        "default_permission": "N",
+        "default_apivisibility": "TVPRM",
+        "ApiKeyRoles": [
+          {
+            "apikey_ident": 3
+          }
+        ],
+        "PermissionData": [
+          {
+            "name": "current_employee_row",
+            "prefix": "main",
+            "query": "* from employee where login = '@{_apikey.user_identifier}'",
+            "query_order": 1,
+            "required": true,
+            "code_type": "SQL"
+          }
+        ],
+        "TablePermissions": [
+          {
+            "name": "My Orders - no update of paid flag",
+            "description": "read, insert and delete my orders (see Globals tab), cannot update paid flag",
+            "entity_name": "main:purchaseorder",
+            "column_names": "paid",
+            "predicate": "salesrep_id = @{current_employee_row.employee_id}",
+            "access_type": "RID"
+          },
+          {
+            "name": "My Orders Write",
+            "description": "read, insert and delete my orders (see Globals tab), any columns",
+            "entity_name": "main:purchaseorder",
+            "column_names": "order_number,amount_total,notes,customer_name,salesrep_id",
+            "predicate": "salesrep_id = @{current_employee_row.employee_id}",
+            "access_type": "A"
+          }
+        ]
+      }
+    ]
+  }
+]

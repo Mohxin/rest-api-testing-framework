@@ -1,0 +1,9 @@
+{
+  "name": "LiveBrowserTest",
+  "version": "0.0.1",
+  "dependencies": {
+    "protractor-html-screenshot-reporter": "0.0.10",
+    "underscore": "~1.6.0",
+    "restler": "~3.2.2"
+  }
+}

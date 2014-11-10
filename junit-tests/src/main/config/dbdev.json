@@ -1,0 +1,55 @@
+{
+"accountUrl" : "el-dev",
+"adminApiKey" : "dev_admin_normal",
+
+// use with permissions to create databases, users and assign privs
+"dbaDatabaseUrl" : "jdbc:mysql://db-004.d.espressologic.com:3306",
+"dbaDatabaseUser" : "admin",
+"dbaDatabasePassword" : "24dk5S5u",
+
+// for the logic admin database
+"adminDatabaseUrl" : "jdbc:mysql://db-004.d.espressologic.com:3306/dbdev_admin",
+"adminDatabaseSchema" : "dbdev_admin",
+"adminDatabaseUser" : "dbdev_admin",
+"adminDatabasePassword" : "kahuna_dev!",
+"adminDatabaseEncryptedPassword" : "plaintext:kahuna_dev!",
+"adminDatabaseEncryptedSalt" : "salt:plaintext",
+
+// for the demo data schema and data (eg customers, orders, ...)
+"demoDatabaseUrl" : "jdbc:mysql://db-004.d.espressologic.com:3306/dbdev_demo",
+"demoDatabaseSchema" : "dbdev_demo",
+"demoDatabaseUser" : "dbdev_demo",
+"demoDatabasePassword" : "kahuna_dev!",
+"demoDatabaseEncryptedPassword" : "plaintext:kahuna_dev!",
+"demoDatabaseEncryptedSalt" : "salt:plaintext",
+
+"sampleDatabaseUrl" : "jdbc:mysql://db-004.d.espressologic.com:3306/dbdev_sample",
+"sampleDatabaseSchema" : "dbdev_sample",
+"sampleDatabaseUser" : "dbdev_sample",
+"sampleDatabasePassword" : "kahuna_dev!",
+"sampleDatabaseEncryptedPassword" : "plaintext:kahuna_dev!",
+"sampleDatabaseEncryptedSalt" : "salt:plaintext",
+
+// sa password: Password0!
+"saPassword" : "Password0!",
+"saPasswordHash" : "2:fXEqE+9gwT1Qq3t94BM0QPDarOK3aI/CPdZJc02XibmH4HTyhiNXKw==",
+"saPasswordSalt" : "PxuQvGe2ZkTHp0beIYTYLE7ErwJYsX5dHy8zkd7U",
+
+// admin password: Password1
+"adminPassword" : "Password1",
+"adminPasswordHash" : "E5SGhPcTVFC5py1cwxCiqsf5//MDU91sZ+6aZE/kkeRw05TgT6KY/UDiJdRuaj6Lfx54McpIx1j/562G8wfeDw==",
+"adminPasswordSalt" : "TaR6ptZREkX0Rqqr5Rdd",
+
+// alpha password: Password1
+"alphaPassword" : "Password1",
+"alphaPasswordHash" : "E5SGhPcTVFC5py1cwxCiqsf5//MDU91sZ+6aZE/kkeRw05TgT6KY/UDiJdRuaj6Lfx54McpIx1j/562G8wfeDw==",
+"alphaPasswordSalt" : "TaR6ptZREkX0Rqqr5Rdd",
+
+// Auth Provider
+"authUrl" : "jdbc:mysql://db-004.d.espressologic.com:3306/dbdev_admin",
+"authSchema" : "dbdev_admin",
+"authUser" : "dbdev_admin",
+"authPassword" : "kahuna_dev!",
+"authEncryptedPassword" : "plaintext:kanuna_dev!",
+"authEncryptedSalt" : "salt:plaintext"
+}
