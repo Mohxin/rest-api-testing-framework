@@ -1,6 +1,0 @@
-// this is a JSON-C file - it is minified before being read
-// so standard JavaScript comments are acceptable
-{
-    "logicServerHost" : "localhost",
-    "logicServerPort" : 8080,
-}

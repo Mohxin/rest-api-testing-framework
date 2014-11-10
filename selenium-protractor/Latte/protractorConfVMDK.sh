@@ -1,8 +1,8 @@
 export WORKSPACE=`pwd`;
 echo WORKSPACE: ${WORKSPACE}
 
-export BASE_URL=http://demodev.espressologic.com
-export REST_URL=${BASE_URL}/rest/el-dev/demo/v1/ 
+export BASE_URL=http://my.espressologic.com
+export REST_URL=${BASE_URL}/rest/{url}/demo/v1/ 
 export NODE_PATH="C:/Program Files/nodejs/node_modules";
 
 
