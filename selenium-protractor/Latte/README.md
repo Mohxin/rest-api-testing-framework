@@ -1,6 +1,7 @@
 ### Install ####
 1. download this project
 2. npm install
+
 ### Edit Config File ###
 protractorConf.js
 
