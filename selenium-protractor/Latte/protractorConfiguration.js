@@ -75,8 +75,7 @@ exports.config = {
     
     // If sauceUser and sauceKey are specified, seleniumServerJar will be ignored.
     // The tests will be run remotely using SauceLabs.
-    //sauceUser: 'maxtardiveau',
-    //sauceKey: '40762a99-dfec-4862-afe0-7f1364f9f299',
+  ,
 
     sauceUser: process.env.SAUCEUSER,
     sauceKey: process.env.SAUCEKEY,
